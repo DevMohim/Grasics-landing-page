@@ -1,0 +1,268 @@
+:root {
+    --darkOrange: #EE5A24;
+    --lightOrange: #F79F1F;
+    --lightGray: rgb(223, 221, 221);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.full-body {
+    position: relative;
+    font-size: 14px;
+    height: 100%;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+}
+.full-body::after{
+    background: black;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+    
+
+/* header::before{
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: relative;
+    z-index:;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+button[type="button"], .icons{
+    cursor: pointer;
+}
+
+
+/* design nav bar */
+header {
+    height: 40px;
+
+    position: sticky;
+    /* z-index: 999; */
+}
+
+header nav {
+    /* background: green; */
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    max-width: 80%;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav h2 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--darkOrange);
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: var(--lightOrange);
+    text-decoration: underline;
+}
+.search-opt{
+    display: flex;
+    align-items: center;
+}
+.search-opt input {
+    padding: 8px;
+    border: 1px solid var(--darkOrange);
+    border-radius: 5px;
+    background: none;
+    color: white;
+    
+}
+
+.search-opt ::placeholder {
+    color: rgb(223, 221, 221);
+}
+
+.search-opt button[type="button"] {
+    background: var(--darkOrange);
+    padding: 7px 30px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    right:2px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* design hero section */
+
+.container {
+    /* background: #ddd; */
+    width: 100%;
+    height: calc(100% - 38px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 145px; 
+}
+
+.text-side{
+    margin-right: 20px;
+    flex-basis: 40%;
+}
+.text-side h1{
+    font-size: 64px;
+    display: block;
+    color: white;
+}
+.text-side h1 span{
+    color: var(--darkOrange);
+    display: block;
+
+}
+.text-side p{
+    color:white;
+    font-size: 14px;
+}
+.text-side button[type = "button"]{
+    background: var(--darkOrange);
+    border: none;
+    margin-top: 15px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.login-side{
+    flex-basis: 60%;
+    background: #050506c1;
+    width: 420px;
+    height: 70%;
+    margin-left: 70px;
+    border-radius: 6px;
+    padding: 30px 15px;
+    backdrop-filter: blur(5px);
+}
+
+.login-side h3{
+    color: var(--darkOrange);
+    font-size: 18px;
+    background: white;
+    padding: 8px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.login-side input{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid var(--darkOrange) ;
+    background: none;
+    margin-bottom: 15px;
+}
+
+.login-side input::placeholder{
+    color: white;
+    font-size: 15px;
+   
+}
+
+.login-side button[type="button"]{
+    color: white;
+    font-size: 16px;
+    background:var(--darkOrange);
+    padding: 8px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.login-side h4{
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: white;
+}
+.login-side h4 a{
+   text-decoration: none;
+    color: var(--darkOrange);
+}
+
+.login-side h6{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-side .icons {
+    color: white;   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.login-side .icons i{
+    margin-right: 5px;
+}
